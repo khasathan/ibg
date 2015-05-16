@@ -26,10 +26,14 @@ class EmailSolverTest(unittest.TestCase):
         self.assertEqual(actual, expect)
 
     def test_dec_to_letters(self):
-        self.assertEqual(self.solver.dec_to_letters(1208), 'bum')
+        expect = 'bum'
+        actual = self.solver.dec_to_letters(1208)
+        self.assertEqual(actual, expect)
 
     def test_letters_to_dec(self):
-        self.assertEqual(self.solver.letters_to_dec('bum'), 1208)
+        expect = 1208
+        actual = self.solver.letters_to_dec('bum')
+        self.assertEqual(actual, expect)
 
 if __name__ == '__main__':
     unittest.main()
