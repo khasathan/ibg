@@ -1,10 +1,10 @@
-IBG email resolver
+XXX application email solver
 ----
-This is quick and dirty Python script to resolve email
+This is quick and dirty Python script to solve email
 from the question in [this link](https://www.blognone.com/node/64683)
 
 ```
-{[([dota + is + ijlegcod]/[a*(game^of^love) + b])*zanroo ] + tmfafj = } @ibgcompany.com
+{[([dota + is + ijlegcod]/[a*(game^of^love) + b])*zanroo ] + tmfafj = } @xxxcompany.com
 วิธีการสมการ จากโจทย์ คือการคำนวณค่าโดย มี a-z เป็นตัวแปร โดย เริ่มที่ a=0 ... z= 25
 เมื่อถอดสมการข้างตันแล้วจะได้ ชื่อ e-mail ที่ใช้ในการสมัครงาน
 ตัวอย่างเช่น
@@ -23,7 +23,7 @@ Just for fun! :)
 
 ## Testing
 ```
-$cd /PATH/TO/ibg
+$cd /PATH/TO/ibg/
 $python3 -m unittest tests
 ```
 You may install `nose` for Python 3 to help you to test the software.
@@ -33,7 +33,7 @@ $sudo apt-get install python3-nose
 $cd /PATH/TO/ibg/
 $nosetest3
 ```
-If error not happen, It should be show the message like below
+If error not happens, It should be show the message like below
 ```
 ....
 ----------------------------------------------------------------------
@@ -46,7 +46,7 @@ OK
 $cd /PATH/TO/ibg/
 $python3 emailsolver.py
 ```
-for easier way
+for easier way you may try ...
 ```
 $chmod +x emailsolver.py
 $./emailsolver.py
