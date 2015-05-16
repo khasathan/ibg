@@ -12,11 +12,7 @@ class EmailSolverTest(unittest.TestCase):
         self.solver = emailsolver.EmailSolver()
 
     def test_number_to_char_array(self):
-        expect = [
-            self.solver.NUM_MAP[0],
-            self.solver.NUM_MAP[1],
-            self.solver.NUM_MAP[2]
-        ]
+        expect = ['a', 'b', 'c']
         actual = self.solver.number_to_char_array([0, 1, 2])
         self.assertEqual(actual, expect)
 
@@ -26,13 +22,13 @@ class EmailSolverTest(unittest.TestCase):
         self.assertEqual(actual, expect)
 
     def test_dec_to_letters(self):
-        expect = 'bum'
-        actual = self.solver.dec_to_letters(1208)
+        expect = 'kor'
+        actual = self.solver.dec_to_letters(7141)
         self.assertEqual(actual, expect)
 
     def test_letters_to_dec(self):
-        expect = 1208
-        actual = self.solver.letters_to_dec('bum')
+        expect = 7141
+        actual = self.solver.letters_to_dec('kor')
         self.assertEqual(actual, expect)
 
 if __name__ == '__main__':
