@@ -21,6 +21,8 @@ class EmailSolver():
         ex. { 0: 'a', 1: 'b', 2: 'c' ... }
         '''
         self.NUM_MAP = dict(zip(self.CHAR_MAP.values(), self.CHAR_MAP.keys()))
+        
+        self.LETTERS_BASE = 26
 
     def number_to_char_array(self, num_array):
         result = []
@@ -36,8 +38,8 @@ class EmailSolver():
         if decimal == 0:
             return 0
         while decimal != 0:
-            reminder = (decimal % 26)
-            decimal = int(math.floor(decimal / 26))
+            reminder = (decimal % self.LETTERS_BASE)
+            decimal = int(math.floor(decimal / self.LETTERS_BASE))
             result = [reminder] + result
         return ''.join(self.number_to_char_array(result))
 
@@ -46,6 +48,6 @@ class EmailSolver():
         char_array = self.string_to_char_array(letters)
         factor = len(char_array) - 1
         for char in char_array:
-            result += self.CHAR_MAP[char] * (26 ** factor)
+            result += self.CHAR_MAP[char] * (self.LETTERS_BASE ** factor)
             factor -= 1
         return result
