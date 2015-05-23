@@ -4,8 +4,6 @@
 @author: khasathan[AT]gmail[DOT]com
 '''
 
-import math
-
 class EmailSolver():
     def __init__(self):
         self.CHAR_MAP = {
@@ -16,12 +14,10 @@ class EmailSolver():
             'u': 20, 'v': 21, 'w': 22, 'x': 23, 'y': 24,
             'z': 25
         }
-
         '''Swap keys and values in CHAR_MAP
         ex. { 0: 'a', 1: 'b', 2: 'c' ... }
         '''
         self.NUM_MAP = dict(zip(self.CHAR_MAP.values(), self.CHAR_MAP.keys()))
-        
         self.LETTERS_BASE = 26
 
     def number_to_char_array(self, num_array):
@@ -38,8 +34,8 @@ class EmailSolver():
         if decimal == 0:
             return 0
         while decimal != 0:
-            reminder = (decimal % self.LETTERS_BASE)
-            decimal = int(math.floor(decimal / self.LETTERS_BASE))
+            reminder = decimal % self.LETTERS_BASE
+            decimal = decimal // self.LETTERS_BASE
             result = [reminder] + result
         return ''.join(self.number_to_char_array(result))
 

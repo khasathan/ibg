@@ -22,11 +22,13 @@ def main():
     zanroo_ = solver.letters_to_dec('zanroo')
     tmfafj_ = solver.letters_to_dec('tmfafj')
 
-    # Expression:
-    # [([dota + is + ijlegcod] / [a * (game ^of ^ love) + b]) * zanroo] + tmfafj
-    # We can ignore part (game^of^love) of expression
-    # because it multiply by 'a' and 'a' = 0
-    answer_dec = int((((dota_ + is_ + ijlegcod_) / (0 + b_)) * zanroo_) + tmfafj_)
+    '''
+     Expression:
+     [([dota + is + ijlegcod] / [a * (game ^ of ^ love) + b]) * zanroo] + tmfafj
+     We can ignore [a * (game ^ of ^ love) + b]. We know that a=0, b=1.
+     So, we get this [0 * (game ^ of ^ love) / 1] = 1
+    '''
+    answer_dec = ((dota_ + is_ + ijlegcod_) * zanroo_) + tmfafj_
     answer_letters = solver.dec_to_letters(answer_dec)
 
     print('Answer: ', end='')
