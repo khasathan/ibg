@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 '''
-@author: khasathan[AT]gmail[DOT]com
+@author: Korkeat W. <khasathan@gmail.com>
 '''
 
 import unittest
@@ -26,7 +26,7 @@ def main():
      Expression:
      [([dota + is + ijlegcod] / [a * (game ^ of ^ love) + b]) * zanroo] + tmfafj
      We can ignore [a * (game ^ of ^ love) + b]. We know that a=0, b=1.
-     So, we get this [0 * (game ^ of ^ love) / 1] = 1
+     So, we get this [0 * (game ^ of ^ love) + 1] = 1
     '''
     answer_dec = ((dota_ + is_ + ijlegcod_) * zanroo_) + tmfafj_
     answer_letters = solver.dec_to_letters(answer_dec)

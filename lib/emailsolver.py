@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 '''
-@author: khasathan[AT]gmail[DOT]com
+@author: Korkeat W. <khasathan@gmail.com>
 '''
 
 class EmailSolver():
